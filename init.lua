@@ -246,6 +246,7 @@ vim.keymap.set("n", "<A-t>", toggle_nvim_tree, { desc = "Toggle NvimTree" })
 vim.keymap.set("v", "<leader>fr", function()
   local conform = require("conform")
   conform.format({ lsp_fallback = true })
+  vim.cmd.write()
 end, { desc = "Format selection" })
 
 local tele_builtin = require("telescope.builtin")
