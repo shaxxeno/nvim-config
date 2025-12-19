@@ -38,7 +38,7 @@ vim.opt.undofile = true
 
 -- Tab stuff
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
@@ -64,6 +64,7 @@ local plugins = {
   { "nvim-lualine/lualine.nvim" },                         -- Status line
   { "nvim-tree/nvim-tree.lua" },                           -- File browser
   { "rmagatti/auto-session" },                             -- Recover Session
+  { "iamcco/markdown-preview.nvim", build = "cd app && npm install", ft = "markdown" },
 
   -- Telescope command menu
   { "nvim-telescope/telescope.nvim" },
@@ -279,3 +280,7 @@ vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open LazyGit" })
 -- Gitsigns
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
 vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle line blame" })
+
+
+-- Markdown Preview
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreview<CR>", { desc = "Markdown preview" })
